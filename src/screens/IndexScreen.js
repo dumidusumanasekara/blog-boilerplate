@@ -7,10 +7,8 @@ import { Feather } from '@expo/vector-icons'
 const IndexScreen = ( { navigation } ) => {
 
     // after refactoring we are sending state variable, not data
-    const { state, addBlogPost, deleteBlogPost } = useContext(BlogContext);
+    const { state, deleteBlogPost } = useContext(BlogContext);
 
-    console.log('the state in index screen')
-    console.log(state)
     return (
         <View>
             <FlatList 

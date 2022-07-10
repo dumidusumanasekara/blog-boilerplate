@@ -38,8 +38,9 @@ const blogReducer = ( state, action ) => {
 
 //modify addBlogPost during the 2nd refactor
 const addBlogPost = dispatch => {
-    return (title, content) => {
-        dispatch({ type: 'add_blogpost', payload: { title:title, content:content} });
+    return (title, content, callback) => {
+        dispatch({ type: 'add_blogpost', payload: { title, content} });
+        callback();
     };
 };
 
